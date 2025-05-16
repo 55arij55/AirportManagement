@@ -1,0 +1,18 @@
+﻿@model AM.ApplicationCore.Domain.Flight
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="row">
+        <dt> Nombre de passagers </dt>
+        <dl> @Model.ListTickets.Count() </dl>
+		<dt> Type avion </dt>
+		<dl> @Model.Plane.PlaneType </dl>
+		<dt> Capacity Avion </dt>
+		<dl> @Model.Plane.Capacity </dl>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.FlightId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
